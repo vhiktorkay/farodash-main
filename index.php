@@ -1344,7 +1344,7 @@ $page_title = $search_term ? "Search: $search_term - FaroDash" : "FaroDash - Foo
         </div>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnU_9F8OtuZFqavbaZ9-kxd9gRmQ00_c4&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=places"></script>
     <script>
         // Global variables
         const API_BASE_URL = 'https://dashboard.farodash.com/api';
@@ -1937,4 +1937,5 @@ rest
         }
     </script>
 </body>
+
 </html>
