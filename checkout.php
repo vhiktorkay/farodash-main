@@ -2400,7 +2400,7 @@ $total = $subtotal + $delivery_fee + $tax_amount;
             // Initialize Google Maps if not already loaded
             if (!window.google) {
                 const script = document.createElement('script');
-                script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDnU_9F8OtuZFqavbaZ9-kxd9gRmQ00_c4&libraries=places&callback=initGoogleMapsCheckout';
+                script.src = 'https://maps.googleapis.com/maps/api/js?key=APIKEY&libraries=places&callback=initGoogleMapsCheckout';
                 script.async = true;
                 script.defer = true;
                 document.head.appendChild(script);
@@ -2501,4 +2501,5 @@ $total = $subtotal + $delivery_fee + $tax_amount;
         }
     </script>
 </body>
+
 </html>
