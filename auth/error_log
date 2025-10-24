@@ -1,0 +1,80 @@
+[05-Oct-2025 15:56:57 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[09-Oct-2025 08:19:30 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[09-Oct-2025 08:19:33 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[09-Oct-2025 14:46:30 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:06:54 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:06:58 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:16 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:16 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:17 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:17 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:18 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[11-Oct-2025 19:07:19 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[14-Oct-2025 22:52:33 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[14-Oct-2025 22:52:36 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[15-Oct-2025 10:27:46 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[15-Oct-2025 21:25:55 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[23-Oct-2025 08:20:19 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[23-Oct-2025 08:25:08 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[23-Oct-2025 08:25:16 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
+[23-Oct-2025 08:27:46 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property AuthManager::$db in /home/farocgrl/public_html/auth/email-verification.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/farocgrl/public_html/auth/email-verification.php on line 30
