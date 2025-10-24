@@ -1423,13 +1423,17 @@ $page_title = $search_term ? "Search: $search_term - FaroDash" : "FaroDash - Foo
         // Load Restaurants
         async function loadRestaurants() {
             try {
-                const response = await fetch('/api/restaurants_proxy.php');
+                const response = await fetch('api/restaurants_proxy.php'); // ✅ correct relative path
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
                 const data = await response.json();
-                
-                if (data.success && data.data) {
+
+                if (data.success && Array.isArray(data.data)) {
                     restaurants = data.data;
                     renderRestaurants();
                     loadTopPicks();
+                } else {
+                    showError('No restaurants found');
                 }
             } catch (error) {
                 console.error('Error loading restaurants:', error);

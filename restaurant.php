@@ -1184,7 +1184,7 @@ $page_title = "Restaurant - FaroDash";
 
     <script>
         // Global variables
-        const API_BASE_URL = 'https://dashboard.farodash.com/api';
+        const API_BASE_URL = 'http://localhost/Ferodash/farodash-vendors';
         const RESTAURANT_ID = <?php echo json_encode($restaurant_id); ?>;
         const USER_LAT = <?php echo json_encode($user_lat); ?>;
         const USER_LNG = <?php echo json_encode($user_lng); ?>;

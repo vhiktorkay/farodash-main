@@ -144,57 +144,103 @@ class APIHandler {
      * Get restaurants with location filtering
      */
     public function getRestaurants($lat = null, $lng = null, $limit = 20, $offset = 0) {
-        $params = ['limit' => $limit, 'offset' => $offset];
-        if ($lat && $lng) {
-            $params['lat'] = $lat;
-            $params['lng'] = $lng;
-        }
-        
-        $endpoint = '/restaurants.php?' . http_build_query($params);
-        $result = $this->makeRequest($endpoint);
+        require_once '../includes/config.php';
 
-        if ($result['success'] && isset($result['data']['success']) && $result['data']['success']) {
+        $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+        if ($conn->connect_error) {
             return [
-                'success' => true,
-                'data' => $result['data']['data'] ?? [],
-                'message' => 'Restaurants loaded successfully'
+                'success' => false,
+                'data' => [],
+                'message' => 'Database connection failed: ' . $conn->connect_error
             ];
         }
 
-        return [
-            'success' => false,
-            'data' => [],
-            'message' => $result['error'] ?? 'Failed to load restaurants'
-        ];
+        $sql = "SELECT id, name, address, cover_image_url, rating,logo_url, rating 
+                FROM restaurants 
+                ORDER BY id DESC 
+                LIMIT ? OFFSET ?";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ii", $limit, $offset);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $restaurants = [];
+            while ($row = $result->fetch_assoc()) {
+                $restaurants[] = $row;
+            }
+
+            $stmt->close();
+            $conn->close();
+
+            return [
+                'success' => true,
+                'data' => $restaurants,
+                'message' => 'Restaurants loaded successfully'
+            ];
+        } else {
+            $stmt->close();
+            $conn->close();
+
+            return [
+                'success' => false,
+                'data' => [],
+                'message' => 'No restaurants found'
+            ];
+        }
     }
 
     /**
      * Get restaurant details by ID
      */
     public function getRestaurantDetails($restaurant_id, $lat = null, $lng = null) {
-        $params = ['endpoint' => 'details', 'id' => $restaurant_id];
-        if ($lat && $lng) {
-            $params['lat'] = $lat;
-            $params['lng'] = $lng;
-        }
+    require_once '../includes/config.php'; // Ensure DB credentials are available
 
-        $endpoint = '/restaurants.php?' . http_build_query($params);
-        $result = $this->makeRequest($endpoint);
+    // Connect to database
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    if ($conn->connect_error) {
+        return [
+            'success' => false,
+            'data' => null,
+            'message' => 'Database connection failed: ' . $conn->connect_error
+        ];
+    }
 
-        if ($result['success'] && isset($result['data']['success']) && $result['data']['success']) {
-            return [
-                'success' => true,
-                'data' => $result['data']['data'],
-                'message' => 'Restaurant details loaded'
-            ];
-        }
+    // Prepare query
+    $sql = "SELECT id, name, address, description, image_url, rating, category, phone, email, website, opening_hours 
+            FROM restaurants 
+            WHERE id = ? 
+            LIMIT 1";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $restaurant_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result && $result->num_rows > 0) {
+        $restaurant = $result->fetch_assoc();
+
+        // Optional: you can add distance calculation here later if $lat and $lng are used
+        $stmt->close();
+        $conn->close();
+
+        return [
+            'success' => true,
+            'data' => $restaurant,
+            'message' => 'Restaurant details loaded successfully'
+        ];
+    } else {
+        $stmt->close();
+        $conn->close();
 
         return [
             'success' => false,
             'data' => null,
-            'message' => $result['error'] ?? 'Restaurant not found'
+            'message' => 'Restaurant not found'
         ];
     }
+}
 
     /**
      * Get food items for restaurant

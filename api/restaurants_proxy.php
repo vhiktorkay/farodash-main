@@ -1,6 +1,6 @@
 <?php
 require_once '../includes/config.php';
-require_once '../api/api_handler.php';
+require_once './api_handler.php';
 header('Content-Type: application/json');
 
 $api = new APIHandler();
